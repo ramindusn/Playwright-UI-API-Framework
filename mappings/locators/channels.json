@@ -1,0 +1,19 @@
+{
+  "posts" : "//div[@data-tracker='Post actions menu']//button",
+  "postComments" : "//div[contains(@data-testid,'post-content')]//p",
+  "viewPost" : "//li[@data-tracker='View post']",
+
+  "reactionButton": "[data-tracker='reactions']",
+  "reactionIframe": "[id='ssIFrame_google']",
+  "reactions" : "//div[@data-tracker='reactions-tooltip']//a",
+
+  "newPostEditor" : "[data-testid='froala-editor']",
+  "postButton" : "[data-testid='publish-post-button']",
+  "newPostActionMenu" : "//p[contains(text(),'just now')]/../../..//div[@data-tracker='Post actions menu']",
+  "editPost" : "[data-tracker='Edit post']",
+  "shareOptions" : "[data-tracker='Share options']",
+  "shareAsAnnouncement" : "[data-tracker='Publish']",
+  "announcementExpiry" : "[id='react-select-2-input']",
+  "shareButton" : "[data-tracker='modal-ok']",
+  "confirmButton" : "button:has-text('Share')"
+}

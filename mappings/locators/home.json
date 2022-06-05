@@ -1,0 +1,8 @@
+{
+  "myStreamLabel" : "//div[@id='view--container-left']//h2",
+
+  "channelsButton" : "[data-testid='nav-channels-button']",
+
+  "channelSearchInput" : "[id='nav-channels-search']",
+  "channelsListData" : "[data-testid='channel-list-drag-drop']"
+}

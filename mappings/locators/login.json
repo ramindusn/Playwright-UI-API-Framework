@@ -1,0 +1,7 @@
+{
+  "signInWithGoogleButton" : "[id='signin-btn']",
+  "usernameField" : "[id='identifierId']",
+  "passwordField" : "[name='password']",
+  "identifierNextButton" : "[id='identifierNext']",
+  "passwordNextButton" : "[id='passwordNext']"
+}
