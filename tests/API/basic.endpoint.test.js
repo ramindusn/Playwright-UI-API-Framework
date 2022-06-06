@@ -2,7 +2,7 @@ const { test, expect} = require('@playwright/test')
 endpoints = require('../../mappings/endpoints.json')
 apiHeaders = require('../../mappings/api-headers.json')
 
-test.only('Add a new comment', async ({request}) => {
+test('Add a new comment', async ({request}) => {
 
     const response = await request.post(endpoints.post_Posts, {
         headers: {
