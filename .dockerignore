@@ -1,0 +1,6 @@
+node_modules
+playwright-report
+logs
+report-screenshots
+test-results
+.github
