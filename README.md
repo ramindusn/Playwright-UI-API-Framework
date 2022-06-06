@@ -25,12 +25,12 @@ Build the image and run tests.
 
 ## Assigment Solution Description
 
-###### Challengers
+###### Encountered Issues 
 1. Home page loading was taking some time to load. I had to use **waitForURL** to handle the Home page loading.
-2. I initially used Page Object Model by define page classes. But I saw it as mess. Then I switch to a **Data driven** approach using json. Implementation can be found in the **mappings** directory.
-3. When selecting random reactions, I had to use Math.random() function which I define it in support directory.
-4. When selecting the '1 week' option from 'Announcement Expiry' I couldn't really inspect the dropdown elements. Since it was an input I pass the dropdown value as text element to locate the value. And it worked.
-5. After landing on the home page, google oath2 is redirected and ask me to select the login account on a new window. I try to disable the browser options of opening new window, but it didn't work. Still I was able to run the tests.
+2. I initially used **Page Object Model** by define page classes. Then I switch to a **Data driven approach** using json. Since it is more readable compare to POM in this scenario.  Implementation can be found in the **mappings** directory.
+3. When selecting random reactions, I had to use Math.random() function which I defined in support directory.
+4. When selecting the '1 week' option from 'Announcement Expiry' I couldn't really inspect the dropdown elements. Since it was an input, I passed the dropdown value as text element to locate the value. And it worked.
+5. After landing on the home page, google oath2 is redirected and ask me to select the login account on a new window. I tried to disable the browser options of opening a new window, but it didn't work. Still I was able to run the tests.
 6. For API automation - I tried to extract and pass the cookies from browser context of playwright to the headers, but couldn't find a proper way to extract both cookies and x-csrf-token. So I had to hard code the header with cookies and x-csrf-token. 
 
 ###### Bugs
