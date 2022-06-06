@@ -29,6 +29,6 @@ test('Add a new comment', async ({request}) => {
 
     expect(response.status()).toBe(200);
     expect(await response.json()).toEqual(expect.objectContaining({
-        "content": "<p>Test api 5</p>",
+        "content": "<p>Test api 5</p>"
     }))
 })
