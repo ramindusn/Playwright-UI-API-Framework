@@ -11,6 +11,7 @@
 * Install dependencies - 'npm install'
 * Run the test - 'npx playwright test'
 * To run the test parallel - Go to 'playwright.config.js' and increase the workers.
+* By default, running in headless mode. Can run the test in headless false by changing the **playwright.config.js**.
 
 playwright.config.js has the general configurations of the framework. (Eg- BaseURL, Header values, timeout, report type, number of workers (parallel run))
 
@@ -35,5 +36,13 @@ Build the image and run tests.
 
 ## Bugs
 Emulator Mobile chrome mode - post reaction icon panel is NOT getting loaded.
+
+Console log
 ![img.png](readme-screenshots/img.png)
 
+Report
+![img.png](readme-screenshots/img_3.png)
+
+![img_1.png](readme-screenshots/img_1.png)
+
+![img_2.png](readme-screenshots/img_2.png)
