@@ -18,6 +18,7 @@ playwright.config.js has the general configurations of the framework. (Eg- BaseU
 ## Report
 * Report can be found in the '**playwright-report**' directory
 * Video of the play is getting recorded in '**test-results**' directory under test name, if the test fails.
+* Latest GitHub jobs, report can be found in the Artifacts section.
 
 ## Run Docker Image
 
