@@ -24,8 +24,6 @@ playwright.config.js has the general configurations of the framework. (Eg- BaseU
 Build the image and run tests.
 * docker build -t playwright-framework .
 
-## Assigment Solution Description
-
 ## Encountered Issues 
 1. Home page was taking some time to load. I had to use **waitForURL** to handle the Home page loading.
 2. I initially used **Page Object Model** by define page classes. Then I switch to a **Data driven approach** using json. Since it is more readable compare to POM in this scenario. Data driven approach implementation can be found in the **mappings** directory.
