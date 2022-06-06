@@ -1,7 +1,7 @@
 # Playwright-UI-API-Framework
 
 ## Technologies
-* javascript
+* JavaScript
 * Playwright
 * Winston
 * Docker
@@ -10,22 +10,22 @@
 ## Setup project locally
 * Install dependencies - 'npm install'
 * Run the test - 'npx playwright test'
-* To run the test parallel - Go to 'playwright.config.js' and increase the works.
+* To run the test parallel - Go to 'playwright.config.js' and increase the workers.
 
-playwright.config.js has the general configurations of the framework. (Eg- BaseURL, Header values, timeout, report type, number of workers(parallel run))
+playwright.config.js has the general configurations of the framework. (Eg- BaseURL, Header values, timeout, report type, number of workers (parallel run))
 
 ## Report
-* Report can be found in the '**playwright-report**'
-* Video of the play is getting record in '**test-results**' directory under test name, if the test fails.
+* Report can be found in the '**playwright-report**' directory
+* Video of the play is getting recorded in '**test-results**' directory under test name, if the test fails.
 
-## Run Docker image
+## Run Docker Image
 
 Build the image and run tests.
 * docker build -t playwright-framework .
 
-## Assigment Solution description
+## Assigment Solution Description
 
-###### Issues face
+###### Challengers
 1. Home page loading was taking some time to load. I had to use **waitForURL** to handle the Home page loading.
 2. I initially used Page Object Model by define page classes. But I saw it as mess. Then I switch to a **Data driven** approach using json. Implementation can be found in the **mappings** directory.
 3. When selecting random reactions, I had to use Math.random() function which I define it in support directory.
