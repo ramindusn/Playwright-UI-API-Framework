@@ -1,6 +1,5 @@
 const { test, expect} = require('@playwright/test')
 const {generateRandomNumber,getRandomNumber} = require('../../support/random-data-helper')
-const logger = require("../../logger/logger");
 login = require('../../mappings/locators/login.json')
 home = require('../../mappings/locators/home.json')
 channels = require('../../mappings/locators/channels.json')
@@ -30,11 +29,11 @@ test('As a user I want to add a random reaction from the default reactions list 
     //View a random post
     await page.locator(channels.posts).first().waitFor();
     const postCount = await page.locator(channels.posts).count();
-    //logger.info("Post Count - "+postCount);
+
     let randomNumber = generateRandomNumber(postCount);
-    //logger.info("Random number - "+randomNumber)
+
     const postComment = await page.locator(channels.postComments).nth(randomNumber).textContent();
-    //logger.info("Post comment - "+postComment);
+
     await page.locator(channels.posts).nth(randomNumber).click();
     await page.click(channels.viewPost);
     await expect(page.locator(channels.postComments)).toHaveText(postComment);
@@ -42,7 +41,7 @@ test('As a user I want to add a random reaction from the default reactions list 
     //Select a random reaction to the post
     await page.hover(channels.reactionButton);
     let randomNumberForReaction = generateRandomNumber(6);
-    //logger.info("random - "+randomNumberForReaction);
+
     await page.locator(channels.reactions).nth(randomNumberForReaction).click();
 
 });
@@ -53,11 +52,13 @@ test('As a user I want to share a post as announcement with expiry period', asyn
     await page.fill(home.channelSearchInput,"Interview Channel");
     await page.click(home.channelsListData);
 
+    //Add a new post
     await page.click(channels.newPostEditor);
     const randomPost = "New Post "+getRandomNumber();
     await page.keyboard.type(randomPost);
     await page.click(channels.postButton)
 
+    //Publish the new post as announcement
     await page.click(channels.newPostActionMenu);
     await page.click(channels.editPost);
     await page.click(channels.shareOptions);
